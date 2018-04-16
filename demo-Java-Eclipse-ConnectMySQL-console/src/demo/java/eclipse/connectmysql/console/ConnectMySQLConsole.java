@@ -33,19 +33,19 @@ public class ConnectMySQLConsole {
 			//String insertSQL = "insert into items values (1, 'TEST-555')";			
 			//statment.executeUpdate(insertSQL);		
 			
-			 String sql;
-		     sql = "SELECT id, name FROM items";
-		     ResultSet rs = statment.executeQuery(sql);
+			String sql;
+		    sql = "SELECT id, name FROM items";
+		    ResultSet rs = statment.executeQuery(sql);
 			
-		     while(rs.next()){		       
+		    while(rs.next()){		       
 		         int id  = rs.getInt("id");
 		         String name = rs.getString("name");  
 		         System.out.print("ID: " + id);		        
 		         System.out.println("Name" + name);
-		      }		      
-		      rs.close();
-		      statment.close();
-		      con.close();
+		    }		      
+		    rs.close();
+		    statment.close();
+		    con.close();
 		      
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
